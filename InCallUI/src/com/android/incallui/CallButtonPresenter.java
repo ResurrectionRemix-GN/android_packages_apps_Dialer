@@ -194,6 +194,10 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
     public void onSupportedAudioMode(int mask) {
         if (getUi() != null) {
             getUi().setSupportedAudio(mask);
+
+        if (mCall != null) {
+            updateButtonsState(mCall);
+            }
         }
     }
 
